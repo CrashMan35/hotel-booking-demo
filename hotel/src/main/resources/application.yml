@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: hotel
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+
+  redis:
+    host: localhost
+    port: 6700
+    password: redis
+    timeout: 3000
+
+server:
+  port: 18020
+
+dubbo:
+  scan:
+    base-packages: hotel.api
+  registry:
+    address: spring-cloud://localhost
+  protocol:
+    name: dubbo
+    port: 28096
+  consumer:
+    check: false
+  provider:
+    threads: 800
+    actives: 200

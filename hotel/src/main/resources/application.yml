@@ -30,3 +30,6 @@ dubbo:
   provider:
     threads: 800
     actives: 200
+#可配置的房间数量
+hotel:
+  amount: 20
